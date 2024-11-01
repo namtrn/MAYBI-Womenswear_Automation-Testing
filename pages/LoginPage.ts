@@ -7,13 +7,14 @@ export class LoginPage extends HelperPage {
   private readonly BTN_SIGN_IN: Locator
   private readonly TXT_EMAIL: Locator
   private readonly TXT_PWD: Locator
-
+  private readonly ERROR_MESSAGE: Locator
 
   constructor(page: Page) {
     super(page)
     this.BTN_SIGN_IN = page.getByRole('button', { name: 'Đăng nhập', exact: true });
     this.TXT_EMAIL = page.getByRole('textbox', { name: 'Email', exact: true })
     this.TXT_PWD = page.getByPlaceholder('Mật khẩu')
+    this.ERROR_MESSAGE =  page.locator('.form-signup.margin-bottom-15')
   }
 
   async enterUserDetails(email: string, password: string) {
@@ -28,4 +29,15 @@ export class LoginPage extends HelperPage {
     //await this.clickElement(this.BTN_SIGN_IN)
     await this.BTN_SIGN_IN.click()
   }
+
+  getErrorMessage() {
+    return this.ERROR_MESSAGE
+  }
+  
+  async printMessage() {
+
+  }
+
+
+
 }

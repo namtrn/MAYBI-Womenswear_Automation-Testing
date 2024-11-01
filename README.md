@@ -95,10 +95,6 @@ npx playwright show-report
 
 Reports will be available in the `playwright-report` folder after test execution.
 
-## Folder Structure
-
-
-
 ## Additional Information
 
 For more detailed information on configuring and using Playwright, refer to the [Playwright documentation](https://playwright.dev/docs/intro).

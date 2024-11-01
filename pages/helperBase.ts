@@ -159,6 +159,10 @@ export class HelperPage {
 
   async expectElement(locator: Locator, value: string) {
     LogHelper.info(`Verify Element text of ${locator.textContent} with value: ${value}`);
+    
+  }
 
+  async printMessage(mess: string) {
+    LogHelper.info(mess)
   }
 }
